@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Companion practice · At Home · El Rapha</title>
+    <meta name="description" content="El Rapha Bookkeeping & Consulting, the companion practice under El Rapha Groups.">
+    <meta name="theme-color" content="#F6F1E8">
+    <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Figtree:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="top">
+      <a href="index.html">Rapha Home Care</a>
+      <div class="nav-slot">
+        <details class="menu">
+          <summary>
+            <span class="open-label">Menu</span>
+            <span class="close-label">Close</span>
+          </summary>
+        </details>
+        <nav aria-label="Primary">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="care.html">Conversation</a></li>
+            <li><a href="companion.html" aria-current="page">Bookkeeping</a></li>
+            <li><a href="../../index.html">All concepts</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main id="main" class="page">
+      <p class="kicker">Companion practice · not part of a care visit</p>
+      <h1>El Rapha Bookkeeping &amp; Consulting</h1>
+      <p>Some people arrive here looking for care and also run an organization. The books are a different practice, under the same group, with a different conversation.</p>
+      <ol class="day">
+        <li>
+          <h2>Bookkeeping</h2>
+          <p>Monthly records that stay current, for a small business, a nonprofit, or a healthcare office.</p>
+        </li>
+        <li>
+          <h2>Formation and compliance</h2>
+          <p>The steps to open, and a calendar of the obligations that follow. Organizing support — not a law firm and not a tax-prep shop.</p>
+        </li>
+        <li>
+          <h2>Calmer operations</h2>
+          <p>Intake and follow-up that do not depend on remembering the next manual step.</p>
+        </li>
+      </ol>
+      <form data-mock-form action="companion.html" method="post">
+        <h2>Ask about the books</h2>
+        <div class="field">
+          <label for="name">Full name (required)</label>
+          <input id="name" name="name" type="text" autocomplete="name" required maxlength="100">
+        </div>
+        <div class="field">
+          <label for="email">Email (required)</label>
+          <input id="email" name="email" type="email" autocomplete="email" required>
+        </div>
+        <div class="field">
+          <label for="org">Organization (optional)</label>
+          <input id="org" name="organization" type="text" autocomplete="organization" maxlength="120">
+        </div>
+        <div class="field">
+          <label for="need">What do you need? (required)</label>
+          <select id="need" name="need" required>
+            <option value="">Choose one</option>
+            <option>Bookkeeping</option>
+            <option>Business formation</option>
+            <option>Compliance</option>
+            <option>Operational consulting</option>
+          </select>
+        </div>
+        <button type="submit">Ask about bookkeeping</button>
+        <p class="form-status" data-mock-status tabindex="-1" role="status" hidden></p>
+      </form>
+      <p><a class="text-link" href="index.html">Return to home care</a></p>
+    </main>
+    <footer class="site-footer">
+      <p>Concept C · At Home · El Rapha Groups</p>
+    </footer>
+    <script src="../../assets/mock-form.js"></script>
+  </body>
+</html>

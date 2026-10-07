@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The House · El Rapha Groups</title>
+    <meta name="description" content="El Rapha Groups: choose bookkeeping and consulting, or Rapha Home Care.">
+    <meta name="theme-color" content="#1C2740">
+    <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="mast">
+      <h1 class="wordmark"><a href="index.html">El Rapha Groups</a></h1>
+      <p class="seal" aria-hidden="true">ER</p>
+      <a class="mast-link" href="../../index.html">All concepts</a>
+    </header>
+    <main id="main">
+      <div class="doors">
+        <article class="door door-books">
+          <p class="eyebrow">Practice one</p>
+          <h2>El Rapha Bookkeeping &amp; Consulting</h2>
+          <p>Books, formation, compliance, and the operating rhythm of a small organization.</p>
+          <ul class="plain-list">
+            <li>Bookkeeping</li>
+            <li>Business formation</li>
+            <li>Compliance and operations</li>
+          </ul>
+          <a class="button" href="bookkeeping.html">Enter bookkeeping</a>
+        </article>
+        <div class="seam" aria-hidden="true"></div>
+        <article class="door door-care">
+          <p class="eyebrow">Practice two</p>
+          <h2>Rapha Home Care, LLC</h2>
+          <p>Licensed in-home support arranged around safety, dignity, and personal assistance.</p>
+          <ul class="plain-list">
+            <li>Licensed home care</li>
+            <li>Personal assistance</li>
+            <li>Safety and dignity at home</li>
+          </ul>
+          <a class="button button-navy" href="home-care.html">Enter home care</a>
+        </article>
+      </div>
+      <section class="begin" aria-labelledby="begin-title">
+        <div class="split">
+          <div>
+            <h2 id="begin-title">A request starts with one note.</h2>
+            <p>Sunday Osogbuyi reads email in the morning. Say which practice you need. The next step comes back by email, without a stack of manual follow-up.</p>
+            <ol class="steps">
+              <li><span class="num">01</span><span>You name the practice and the need.</span></li>
+              <li><span class="num">02</span><span>A confirmation arrives by email.</span></li>
+              <li><span class="num">03</span><span>A short intake packet follows.</span></li>
+              <li><span class="num">04</span><span>Onboarding starts from that packet.</span></li>
+            </ol>
+            <p class="contact-line"><a href="mailto:sundayosogbuyi@elraphagroups.com">sundayosogbuyi@elraphagroups.com</a></p>
+            <p class="contact-line"><a href="tel:+19292722147">(929) 272-2147</a></p>
+          </div>
+          <form data-mock-form action="index.html" method="post">
+            <div class="field">
+              <label for="name">Full name (required)</label>
+              <input id="name" name="name" type="text" autocomplete="name" required maxlength="100">
+            </div>
+            <div class="field">
+              <label for="email">Email (required)</label>
+              <input id="email" name="email" type="email" autocomplete="email" required enterkeyhint="next">
+            </div>
+            <div class="field">
+              <label for="phone">Phone (optional)</label>
+              <input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel">
+            </div>
+            <fieldset>
+              <legend>Which practice? (required)</legend>
+              <label class="choice" for="practice-books">
+                <input id="practice-books" type="radio" name="practice" value="bookkeeping" required>
+                Bookkeeping &amp; consulting
+              </label>
+              <label class="choice" for="practice-care">
+                <input id="practice-care" type="radio" name="practice" value="home-care">
+                Home care
+              </label>
+            </fieldset>
+            <div class="field">
+              <label for="note">What should we know? (optional)</label>
+              <textarea id="note" name="note" maxlength="600" aria-describedby="note-hint"></textarea>
+              <span class="hint" id="note-hint">Please do not include medical details. This preview does not send your note.</span>
+            </div>
+            <button type="submit">Send the note</button>
+            <p class="form-status" data-mock-status tabindex="-1" role="status" hidden></p>
+            <noscript>
+              <p>This preview confirms on the page with JavaScript. To begin for real, email sundayosogbuyi@elraphagroups.com.</p>
+            </noscript>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <p>Concept A · The House · El Rapha Groups · ElRaphaGroups.com</p>
+      <p>Mornings by email. <a href="../../index.html">Back to all concepts</a></p>
+    </footer>
+    <script src="../../assets/mock-form.js"></script>
+  </body>
+</html>

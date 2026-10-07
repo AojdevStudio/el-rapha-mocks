@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start Here · El Rapha Groups</title>
+    <meta name="description" content="Request bookkeeping or home care from El Rapha Groups. The intake is the first thing on the page.">
+    <meta name="theme-color" content="#121E33">
+    <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560&family=Manrope:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <a class="skip" href="#intake">Skip to intake</a>
+    <header class="bar">
+      <a class="brand" href="index.html">EL RAPHA</a>
+      <div class="bar-actions">
+        <a class="phone phone-wide" href="tel:+19292722147">(929) 272-2147</a>
+        <div class="nav-slot">
+          <details class="menu">
+            <summary>
+              <span class="open-label">Menu</span>
+              <span class="close-label">Close</span>
+            </summary>
+          </details>
+          <nav aria-label="Primary">
+            <ul>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="book.html">Book a window</a></li>
+              <li><a href="../../index.html">All concepts</a></li>
+            </ul>
+          </nav>
+        </div>
+        <a class="button" href="#intake">Start intake</a>
+      </div>
+    </header>
+    <main id="main">
+      <div class="stage">
+        <div>
+          <h1>Tell us which practice you need.</h1>
+          <p class="lede">Bookkeeping or home care. Send a note. Confirmation comes by email — Sunday reads mail in the morning — and the onboarding steps follow without another round of admin.</p>
+          <ul class="chips" aria-label="Practices">
+            <li>Bookkeeping</li>
+            <li>Formation</li>
+            <li>Compliance</li>
+            <li>Operations</li>
+            <li>Home care</li>
+          </ul>
+          <ol class="pipeline">
+            <li><span class="chip">You</span><span>Name the practice and the need.</span></li>
+            <li><span class="chip">Email</span><span>A confirmation arrives. Nothing sits in a notebook.</span></li>
+            <li><span class="chip">Packet</span><span>One short intake asks for what is still missing.</span></li>
+            <li><span class="chip">Start</span><span>The work begins on that packet.</span></li>
+          </ol>
+        </div>
+        <form id="intake" class="card" data-mock-form action="index.html" method="post">
+          <h2>Start intake</h2>
+          <div class="field">
+            <label for="name">Full name (required)</label>
+            <input id="name" name="name" type="text" autocomplete="name" required maxlength="100" enterkeyhint="next">
+          </div>
+          <div class="field">
+            <label for="email">Email (required)</label>
+            <input id="email" name="email" type="email" autocomplete="email" required enterkeyhint="next">
+          </div>
+          <div class="field">
+            <label for="phone">Phone (optional)</label>
+            <input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel">
+          </div>
+          <fieldset>
+            <legend>Practice (required)</legend>
+            <label class="choice" for="practice-books">
+              <input id="practice-books" type="radio" name="practice" value="bookkeeping" required>
+              Bookkeeping &amp; consulting
+            </label>
+            <label class="choice" for="practice-care">
+              <input id="practice-care" type="radio" name="practice" value="home-care">
+              Home care
+            </label>
+          </fieldset>
+          <div class="field">
+            <label for="need">What do you need? (required)</label>
+            <select id="need" name="need" required>
+              <option value="">Choose one</option>
+              <option>Monthly bookkeeping</option>
+              <option>Business formation</option>
+              <option>Compliance support</option>
+              <option>Operational consulting</option>
+              <option>Home care inquiry</option>
+              <option>Not sure yet</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="note">Note (optional)</label>
+            <textarea id="note" name="note" maxlength="400" aria-describedby="note-hint"></textarea>
+            <span class="hint" id="note-hint">Do not include medical details or account numbers. This preview does not send the form.</span>
+          </div>
+          <button type="submit">Request a reply</button>
+          <p class="form-status" data-mock-status tabindex="-1" role="status" hidden></p>
+        </form>
+      </div>
+      <section class="proof" aria-label="Placeholder social proof">
+        <article>
+          <h2>Placeholder · not a real testimonial</h2>
+          <p>Outcome slot. Replace with a permitted result, such as hours handed off, once a client agrees to be quoted.</p>
+          <p>Name withheld · placeholder</p>
+        </article>
+        <article>
+          <h2>Placeholder metric</h2>
+          <p>— qualified inquiries in a month. Publish a number only after it is real.</p>
+        </article>
+        <article>
+          <h2>Placeholder · onboarding</h2>
+          <p>Slot for “what used to take a week of email now starts from one form.” Do not invent the story.</p>
+        </article>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <p>Concept D · Start Here · Sunday Osogbuyi · <a href="mailto:sundayosogbuyi@elraphagroups.com">sundayosogbuyi@elraphagroups.com</a> · <a href="tel:+19292722147">(929) 272-2147</a></p>
+      <p>Mornings by email. <a href="services.html">Services</a> · <a href="book.html">Book a morning window</a> · <a href="../../index.html">All concepts</a></p>
+    </footer>
+    <script src="../../assets/mock-form.js"></script>
+  </body>
+</html>

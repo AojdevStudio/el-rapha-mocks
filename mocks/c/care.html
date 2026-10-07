@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A conversation · At Home · Rapha Home Care</title>
+    <meta name="description" content="What Rapha Home Care support includes, and a short way to request a conversation.">
+    <meta name="theme-color" content="#F6F1E8">
+    <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Figtree:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="top">
+      <a href="index.html">Rapha Home Care</a>
+      <div class="nav-slot">
+        <details class="menu">
+          <summary>
+            <span class="open-label">Menu</span>
+            <span class="close-label">Close</span>
+          </summary>
+        </details>
+        <nav aria-label="Primary">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="care.html" aria-current="page">Conversation</a></li>
+            <li><a href="companion.html">Bookkeeping</a></li>
+            <li><a href="../../index.html">All concepts</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main id="main" class="page">
+      <p class="kicker">Rapha Home Care, LLC</p>
+      <h1>What a first conversation is for.</h1>
+      <p>To learn whether in-home support is the right fit, and what a calm week would need to look like. It is not an exam, and it is not a place to send medical records.</p>
+      <ol class="day" id="support">
+        <li>
+          <h2>The ordinary day</h2>
+          <p>Personal assistance with routines the household already knows. The pace belongs to the person at home.</p>
+        </li>
+        <li>
+          <h2>A steadier presence</h2>
+          <p>Visits arranged so the home stays workable. Scheduling is the point of the follow-up email, not a pile of phone tag.</p>
+        </li>
+        <li>
+          <h2>Safety, said plainly</h2>
+          <p>Practical risks of being at home, named without turning the conversation into a clinical chart.</p>
+        </li>
+        <li>
+          <h2>What this practice does not do here</h2>
+          <p>Licensed home care and personal assistance. Diagnosis, treatment plans, and medication decisions stay with a clinician. Please leave them out of this form.</p>
+        </li>
+      </ol>
+      <form data-mock-form action="care.html" method="post">
+        <h2>Request a conversation</h2>
+        <div class="field">
+          <label for="name">Full name (required)</label>
+          <input id="name" name="name" type="text" autocomplete="name" required maxlength="100">
+        </div>
+        <div class="field">
+          <label for="email">Email (required)</label>
+          <input id="email" name="email" type="email" autocomplete="email" required>
+        </div>
+        <div class="field">
+          <label for="phone">Phone (optional)</label>
+          <input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel">
+        </div>
+        <div class="field">
+          <label for="area">City or neighborhood (optional)</label>
+          <input id="area" name="area" type="text" maxlength="120" autocomplete="address-level2" aria-describedby="area-hint">
+          <span class="hint" id="area-hint">Enough to know if the area is one Sunday can reach. No street address required.</span>
+        </div>
+        <fieldset>
+          <legend>What should the reply cover? (required)</legend>
+          <label class="choice" for="topic-visit">
+            <input id="topic-visit" type="radio" name="topic" value="visits" required>
+            Regular in-home support
+          </label>
+          <label class="choice" for="topic-assist">
+            <input id="topic-assist" type="radio" name="topic" value="assistance">
+            Personal assistance
+          </label>
+          <label class="choice" for="topic-unsure">
+            <input id="topic-unsure" type="radio" name="topic" value="unsure">
+            Not sure yet
+          </label>
+        </fieldset>
+        <button type="submit">Request a conversation</button>
+        <p class="form-status" data-mock-status tabindex="-1" role="status" hidden></p>
+      </form>
+    </main>
+    <footer class="site-footer">
+      <p>Concept C · At Home · <a href="mailto:sundayosogbuyi@elraphagroups.com">sundayosogbuyi@elraphagroups.com</a></p>
+    </footer>
+    <script src="../../assets/mock-form.js"></script>
+  </body>
+</html>
