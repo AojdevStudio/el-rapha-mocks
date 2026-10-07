@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home care · The House · El Rapha Groups</title>
+    <meta name="description" content="Rapha Home Care, LLC: licensed home care, personal assistance, and in-home support centered on safety and dignity.">
+    <meta name="theme-color" content="#1C2740">
+    <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="mast">
+      <a class="wordmark" href="index.html">El Rapha Groups</a>
+      <div class="nav-slot">
+        <details class="menu">
+          <summary>
+            <span class="open-label">Menu</span>
+            <span class="close-label">Close</span>
+          </summary>
+        </details>
+        <nav aria-label="Primary">
+          <ul>
+            <li><a href="index.html">The house</a></li>
+            <li><a href="bookkeeping.html">Bookkeeping</a></li>
+            <li><a href="home-care.html" aria-current="page">Home care</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main id="main" class="page">
+      <p class="eyebrow">Rapha Home Care, LLC</p>
+      <div class="page-hero">
+        <h1>Support in the home, held to a quiet standard.</h1>
+        <p class="prose">Licensed home care and personal assistance for people who need a steady presence at home. The work is arranged around safety and dignity. It is not a clinical service, and this site does not collect medical records.</p>
+      </div>
+      <section aria-labelledby="care-services">
+        <h2 id="care-services">What a first conversation can cover</h2>
+        <div class="service-grid">
+          <article>
+            <h3>Personal assistance</h3>
+            <p>Help with the ordinary parts of a day, paced to the person and the household.</p>
+          </article>
+          <article>
+            <h3>In-home support</h3>
+            <p>A reliable visit pattern so the home stays workable for the people who live there.</p>
+          </article>
+          <article>
+            <h3>Safety</h3>
+            <p>Attention to the practical risks of being at home, raised early and handled plainly.</p>
+          </article>
+          <article>
+            <h3>Dignity</h3>
+            <p>The baseline, not an add-on. Support should leave a person in charge of their own home.</p>
+          </article>
+        </div>
+      </section>
+      <section class="split" aria-labelledby="inquiry-title">
+        <div>
+          <h2 id="inquiry-title">How an inquiry moves</h2>
+          <ol class="steps">
+            <li><span class="num">01</span><span>You send a short note. Leave medical details out of this form.</span></li>
+            <li><span class="num">02</span><span>Sunday confirms by email, usually from a morning read.</span></li>
+            <li><span class="num">03</span><span>A scheduling packet asks only what the first visit needs.</span></li>
+            <li><span class="num">04</span><span>Support starts once the fit and the timing are clear.</span></li>
+          </ol>
+        </div>
+        <form data-mock-form action="home-care.html" method="post">
+          <h2>Request a home-care conversation</h2>
+          <div class="field">
+            <label for="name">Full name (required)</label>
+            <input id="name" name="name" type="text" autocomplete="name" required maxlength="100">
+          </div>
+          <div class="field">
+            <label for="email">Email (required)</label>
+            <input id="email" name="email" type="email" autocomplete="email" required>
+          </div>
+          <div class="field">
+            <label for="phone">Phone (optional)</label>
+            <input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel">
+          </div>
+          <div class="field">
+            <label for="area">Area where support is needed (optional)</label>
+            <input id="area" name="area" type="text" maxlength="120" aria-describedby="area-hint" autocomplete="address-level2">
+            <span class="hint" id="area-hint">City or neighborhood is enough. Do not include diagnoses or medical history.</span>
+          </div>
+          <fieldset>
+            <legend>Preferred reply (required)</legend>
+            <label class="choice" for="reply-email">
+              <input id="reply-email" type="radio" name="reply" value="email" required checked>
+              Email
+            </label>
+            <label class="choice" for="reply-phone">
+              <input id="reply-phone" type="radio" name="reply" value="phone">
+              Phone
+            </label>
+          </fieldset>
+          <button type="submit">Request a conversation</button>
+          <p class="form-status" data-mock-status tabindex="-1" role="status" hidden></p>
+        </form>
+      </section>
+      <aside class="cross">
+        <p>The other door of the house keeps the books.</p>
+        <a href="bookkeeping.html">Cross to bookkeeping</a>
+      </aside>
+    </main>
+    <footer class="site-footer">
+      <p>Concept A · The House · Rapha Home Care, LLC · <a href="tel:+19292722147">(929) 272-2147</a></p>
+      <p><a href="../../index.html">All concepts</a></p>
+    </footer>
+    <script src="../../assets/mock-form.js"></script>
+  </body>
+</html>

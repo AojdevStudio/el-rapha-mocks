@@ -1,0 +1,521 @@
+/* Concept A — The House. Two equal doors, then a shared way to begin. */
+
+:root {
+  --navy: #1c2740;
+  --cream: #f6f1e7;
+  --warm: #f3e6cf;
+  --gold: #e7d3a1;
+  --gold-line: #c6a15b;
+  --muted: #d9d3c7;
+  --ink-soft: #3d4c63;
+  --gold-text: #6e5830;
+  color-scheme: light;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--navy);
+  font-family: "Outfit", "Segoe UI", sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.55;
+}
+
+a {
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 3px solid var(--gold-line);
+  outline-offset: 3px;
+}
+
+.skip {
+  position: absolute;
+  inset-inline-start: 0.75rem;
+  inset-block-start: 0.75rem;
+  transform: translateY(-160%);
+  background: var(--cream);
+  color: var(--navy);
+  padding: 0.75rem 1rem;
+  z-index: 6;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.skip:focus {
+  transform: none;
+}
+
+.mast {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.85rem 1.25rem;
+  background: var(--navy);
+  color: var(--cream);
+}
+
+.wordmark {
+  margin: 0;
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 1.35rem;
+  font-weight: 560;
+  line-height: 1.2;
+}
+
+.wordmark a {
+  text-decoration: none;
+}
+
+.mast-link {
+  justify-self: end;
+  color: var(--gold);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.25em;
+}
+
+.seal {
+  width: 3.25rem;
+  height: 3.25rem;
+  margin-inline: auto;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--gold);
+  border-radius: 50%;
+  color: var(--gold);
+  letter-spacing: 0.08em;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.seam {
+  background: var(--gold-line);
+}
+
+.doors {
+  display: grid;
+  grid-template-columns: 1fr 0.45rem 1fr;
+  background: var(--gold-line);
+}
+
+.door {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  min-height: calc(100dvh - 5.2rem);
+  padding: clamp(2rem, 5vw, 4.5rem);
+}
+
+.door-books {
+  background: var(--navy);
+  color: var(--cream);
+}
+
+.door-care {
+  background: var(--warm);
+  color: var(--navy);
+}
+
+.eyebrow {
+  margin: 0;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+}
+
+.door-books .eyebrow {
+  color: var(--gold);
+}
+
+.door-care .eyebrow {
+  color: var(--gold-text);
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 560;
+  text-wrap: balance;
+  line-height: 1.12;
+}
+
+.door h2 {
+  margin: 0;
+  font-size: clamp(2.3rem, 4vw, 3.7rem);
+  max-width: 12ch;
+}
+
+.door p {
+  margin: 0;
+  max-width: 36ch;
+}
+
+.door-books p {
+  color: var(--muted);
+}
+
+.plain-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.plain-list li {
+  padding-block: 0.35rem;
+  border-top: 1px solid currentColor;
+  border-color: rgba(198, 161, 91, 0.55);
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0.75rem 1.2rem;
+  background: var(--gold);
+  color: var(--navy);
+  text-decoration: none;
+  font-weight: 600;
+  width: fit-content;
+}
+
+.button:hover {
+  background: #f3e4bf;
+}
+
+.button-navy {
+  background: var(--navy);
+  color: var(--cream);
+}
+
+.button-navy:hover {
+  background: #2a3b5c;
+}
+
+.begin,
+.page {
+  width: min(1080px, calc(100% - 2rem));
+  margin-inline: auto;
+  padding-block: 4rem 3rem;
+}
+
+.begin h2,
+.page h1 {
+  margin: 0 0 0.75rem;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+}
+
+.split {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+.steps {
+  margin: 1.25rem 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.85rem;
+}
+
+.steps li {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.75rem;
+  align-items: baseline;
+}
+
+.num {
+  font-family: "Fraunces", Georgia, serif;
+  color: var(--gold-text);
+}
+
+.contact-line {
+  margin: 0.35rem 0;
+}
+
+.contact-line a {
+  color: var(--navy);
+}
+
+form {
+  accent-color: var(--navy);
+  display: grid;
+  gap: 0.25rem;
+}
+
+fieldset {
+  border: 0;
+  margin: 0 0 1.15rem;
+  padding: 0;
+}
+
+legend,
+.field label {
+  display: block;
+  font-weight: 600;
+  margin-block-end: 0.35rem;
+}
+
+.field {
+  margin-block-end: 1.15rem;
+}
+
+.choice {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  min-height: 48px;
+  font-weight: 500;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  min-height: 48px;
+  padding: 0.7rem 0.8rem;
+  font: inherit;
+  color: var(--navy);
+  background: #fff;
+  border: 1px solid #8d97a8;
+  border-radius: 0;
+}
+
+textarea {
+  min-height: 8rem;
+  resize: vertical;
+}
+
+input:user-invalid,
+textarea:user-invalid,
+select:user-invalid {
+  border-color: #8c3a3a;
+  border-width: 2px;
+}
+
+.hint {
+  display: block;
+  margin-block-start: 0.35rem;
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+}
+
+button[type="submit"] {
+  min-height: 48px;
+  padding: 0.75rem 1.2rem;
+  border: 0;
+  background: var(--navy);
+  color: var(--cream);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  width: fit-content;
+}
+
+button[type="submit"]:hover {
+  background: #2a3b5c;
+}
+
+.form-status {
+  margin-block-start: 1rem;
+  padding: 1rem;
+  background: #fff;
+  border-inline-start: 4px solid var(--gold-line);
+}
+
+.form-status:focus {
+  outline: 3px solid var(--gold-line);
+}
+
+.page-hero {
+  padding-block: 3rem 1rem;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-block: 2rem;
+}
+
+.service-grid article {
+  padding: 1.25rem;
+  background: #fff;
+  border-block-start: 3px solid var(--gold-line);
+}
+
+.service-grid h3 {
+  margin: 0 0 0.4rem;
+  font-size: 1.45rem;
+}
+
+.service-grid p,
+.prose p {
+  margin: 0.4rem 0 0;
+  max-width: 62ch;
+}
+
+.cross {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+  margin-block-start: 2.5rem;
+  padding: 1.25rem;
+  background: var(--navy);
+  color: var(--cream);
+}
+
+.cross a {
+  color: var(--gold);
+}
+
+.site-footer {
+  padding: 1.5rem 1.25rem 2rem;
+  background: var(--navy);
+  color: var(--muted);
+}
+
+.site-footer a {
+  color: var(--gold);
+}
+
+.site-footer p {
+  width: min(1080px, 100%);
+  margin: 0.25rem auto;
+}
+
+.menu {
+  justify-self: end;
+}
+
+.menu summary {
+  min-height: 48px;
+  padding-block: 0.85rem;
+  padding-inline: 0.25rem;
+  cursor: pointer;
+  color: var(--gold);
+  list-style: none;
+}
+
+.menu summary::-webkit-details-marker {
+  display: none;
+}
+
+.menu:not([open]) .close-label,
+.menu[open] .open-label {
+  display: none;
+}
+
+.nav-slot nav ul {
+  display: flex;
+  gap: 1.1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-slot nav a {
+  color: var(--cream);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  min-height: 48px;
+}
+
+.nav-slot nav a[aria-current="page"] {
+  color: var(--gold);
+  text-decoration: underline;
+  text-underline-offset: 0.3em;
+}
+
+.nav-slot {
+  position: relative;
+}
+
+@media (max-width: 860px) {
+  .mast,
+  .doors,
+  .split,
+  .service-grid,
+  .cross {
+    grid-template-columns: 1fr;
+  }
+
+  .mast {
+    flex-wrap: wrap;
+  }
+
+  .seal {
+    order: 3;
+    margin-inline: 0;
+  }
+
+  .seam {
+    min-height: 0.45rem;
+  }
+
+  .door {
+    min-height: auto;
+    padding-block: 2.5rem;
+  }
+
+  .doors {
+    background: transparent;
+    gap: 0.45rem;
+  }
+
+  .nav-slot nav ul {
+    flex-direction: column;
+    gap: 0;
+    padding-block-end: 0.5rem;
+  }
+
+  .nav-slot > nav {
+    display: none;
+  }
+
+  .menu[open] + nav {
+    display: block;
+    position: absolute;
+    z-index: 6;
+    inset-inline-end: 0;
+    top: 100%;
+    min-width: 13.5rem;
+    padding: 0.25rem 0.9rem 0.5rem;
+    background: var(--navy);
+  }
+}
+
+@media (min-width: 861px) {
+  .menu {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a window · Start Here · El Rapha Groups</title>
+    <meta name="description" content="Request a morning conversation window with El Rapha Groups.">
+    <meta name="theme-color" content="#121E33">
+    <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560&family=Manrope:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="bar">
+      <a class="brand" href="index.html">EL RAPHA</a>
+      <div class="bar-actions">
+        <a class="phone phone-wide" href="tel:+19292722147">(929) 272-2147</a>
+        <div class="nav-slot">
+          <details class="menu">
+            <summary>
+              <span class="open-label">Menu</span>
+              <span class="close-label">Close</span>
+            </summary>
+          </details>
+          <nav aria-label="Primary">
+            <ul>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="book.html" aria-current="page">Book a window</a></li>
+              <li><a href="../../index.html">All concepts</a></li>
+            </ul>
+          </nav>
+        </div>
+        <a class="button" href="index.html#intake">Start intake</a>
+      </div>
+    </header>
+    <main id="main">
+      <form class="sheet" data-mock-form action="book.html" method="post">
+        <nav aria-label="Progress">
+          <ol class="progress">
+            <li>1 · Practice</li>
+            <li aria-current="step">2 · Morning window</li>
+            <li>3 · Email confirmation</li>
+          </ol>
+        </nav>
+        <h1>Book a morning window.</h1>
+        <p>These are request slots, not a live calendar. A real build would hold the time only after the confirmation email. Sunday replies in the morning.</p>
+        <fieldset>
+          <legend>Practice (required)</legend>
+          <label class="choice" for="practice-books">
+            <input id="practice-books" type="radio" name="practice" value="bookkeeping" required>
+            Bookkeeping &amp; consulting
+          </label>
+          <label class="choice" for="practice-care">
+            <input id="practice-care" type="radio" name="practice" value="home-care">
+            Home care
+          </label>
+        </fieldset>
+        <div class="field">
+          <label for="day">Preferred date (required)</label>
+          <input id="day" name="day" type="date" required>
+        </div>
+        <fieldset>
+          <legend>Morning window, Eastern time (required)</legend>
+          <div class="slots">
+            <label class="slot" for="slot-8">
+              <input id="slot-8" type="radio" name="window" value="8" required>
+              8:00–9:00 a.m.
+            </label>
+            <label class="slot" for="slot-9">
+              <input id="slot-9" type="radio" name="window" value="9">
+              9:00–10:00 a.m.
+            </label>
+            <label class="slot" for="slot-10">
+              <input id="slot-10" type="radio" name="window" value="10">
+              10:00–11:00 a.m.
+            </label>
+            <label class="slot" for="slot-email">
+              <input id="slot-email" type="radio" name="window" value="email">
+              Email me a time instead
+            </label>
+          </div>
+        </fieldset>
+        <div class="field">
+          <label for="email">Email (required)</label>
+          <input id="email" name="email" type="email" autocomplete="email" required>
+        </div>
+        <div class="field">
+          <label for="name">Full name (required)</label>
+          <input id="name" name="name" type="text" autocomplete="name" required maxlength="100">
+        </div>
+        <button type="submit">Request this window</button>
+        <p class="form-status" data-mock-status tabindex="-1" role="status" hidden></p>
+        <noscript>
+          <p>Email sundayosogbuyi@elraphagroups.com to request a time. This preview does not book anything.</p>
+        </noscript>
+      </form>
+    </main>
+    <footer class="site-footer">
+      <p>Concept D · Start Here · <a href="../../index.html">All concepts</a></p>
+    </footer>
+    <script src="../../assets/mock-form.js"></script>
+  </body>
+</html>

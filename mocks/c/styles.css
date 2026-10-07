@@ -1,0 +1,408 @@
+/* Concept C — At Home. Care leads. Bookkeeping is the companion practice. */
+
+:root {
+  --navy: #1c2b45;
+  --cream: #f6f1e8;
+  --gold: #e7d3a8;
+  --gold-deep: #6e5830;
+  --ink: #1c2b45;
+  --muted: #3d4c63;
+  color-scheme: light;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--ink);
+  font-family: "Figtree", "Segoe UI", sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+
+:focus-visible {
+  outline: 3px solid var(--gold-deep);
+  outline-offset: 3px;
+}
+
+.skip {
+  position: absolute;
+  inset-inline-start: 0.75rem;
+  inset-block-start: 0.75rem;
+  transform: translateY(-160%);
+  background: #fff;
+  color: var(--navy);
+  padding: 0.75rem 1rem;
+  z-index: 5;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.skip:focus {
+  transform: none;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 1.5rem 0;
+}
+
+.top a {
+  color: var(--navy);
+  min-height: 48px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.home {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  min-height: calc(100dvh - 4rem);
+}
+
+.spine {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  color: var(--gold-deep);
+  padding: 2rem 1rem;
+  border-inline-end: 1px solid rgba(110, 88, 48, 0.35);
+}
+
+.story {
+  width: min(40rem, calc(100% - 3rem));
+  margin-inline: auto;
+  padding-block: 8vh 4rem;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-weight: 500;
+  line-height: 1.05;
+  text-wrap: balance;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(3.2rem, 8vw, 5.4rem);
+}
+
+.intro {
+  font-size: 1.25rem;
+  max-width: 36ch;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 1.5rem;
+  align-items: center;
+  margin-block: 1.5rem 2.5rem;
+}
+
+.button,
+button[type="submit"] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0.8rem 1.3rem;
+  border-radius: 999px;
+  background: var(--navy);
+  color: var(--cream);
+  text-decoration: none;
+  border: 0;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.button:hover,
+button[type="submit"]:hover {
+  background: #2c4066;
+}
+
+.text-link {
+  color: var(--navy);
+}
+
+.principles {
+  display: grid;
+  gap: 1.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.principles li {
+  padding-block: 1rem;
+  border-top: 1px solid rgba(28, 43, 69, 0.15);
+}
+
+.principles h2 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.principles p {
+  margin: 0.25rem 0 0;
+  max-width: 46ch;
+  color: var(--muted);
+}
+
+.kicker {
+  margin: 0 0 0.4rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  color: var(--gold-deep);
+}
+
+.wash {
+  background:
+    radial-gradient(ellipse at 20% 0%, rgba(231, 211, 168, 0.9), transparent 55%),
+    var(--gold);
+  padding-block: 4rem;
+}
+
+.wash .story,
+.companion .story {
+  padding-block: 0;
+}
+
+.companion {
+  padding-block: 4rem;
+}
+
+.companion h2 {
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  margin-bottom: 0.5rem;
+}
+
+.site-footer {
+  padding: 1.5rem;
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+.site-footer a {
+  color: var(--navy);
+}
+
+.page {
+  width: min(42rem, calc(100% - 2.5rem));
+  margin-inline: auto;
+  padding-block: 2rem 4rem;
+}
+
+.page h1 {
+  font-size: clamp(2.8rem, 6vw, 4.4rem);
+  margin-block-end: 1rem;
+}
+
+.day {
+  margin: 2rem 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 1rem;
+}
+
+.day li {
+  background: #fff;
+  border-radius: 1.25rem;
+  padding: 1.1rem 1.2rem;
+}
+
+.day h2 {
+  margin: 0 0 0.3rem;
+  font-size: 1.8rem;
+}
+
+.day p {
+  margin: 0;
+  color: var(--muted);
+}
+
+form {
+  accent-color: var(--navy);
+  margin-block-start: 1.5rem;
+  background: #fff;
+  border-radius: 1.25rem;
+  padding: 1.25rem;
+}
+
+.field {
+  margin-block-end: 1.15rem;
+}
+
+.field label,
+legend {
+  display: block;
+  font-weight: 600;
+  margin-block-end: 0.35rem;
+}
+
+fieldset {
+  border: 0;
+  margin: 0 0 1rem;
+  padding: 0;
+}
+
+.choice {
+  display: flex;
+  gap: 0.7rem;
+  align-items: center;
+  min-height: 48px;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  min-height: 48px;
+  padding: 0.75rem 0.85rem;
+  font: inherit;
+  border: 1px solid #8d97a8;
+  border-radius: 0.75rem;
+  background: #fff;
+  color: var(--ink);
+}
+
+textarea {
+  min-height: 8rem;
+  resize: vertical;
+}
+
+input:user-invalid,
+textarea:user-invalid,
+select:user-invalid {
+  border-color: #8c3a3a;
+  border-width: 2px;
+}
+
+.hint {
+  display: block;
+  margin-block-start: 0.35rem;
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+.form-status {
+  margin-block-start: 1rem;
+  padding: 0.9rem 1rem;
+  background: var(--gold);
+  border-radius: 0.75rem;
+}
+
+.nav-slot {
+  position: relative;
+}
+
+.menu summary {
+  list-style: none;
+  cursor: pointer;
+  min-height: 48px;
+  padding-block: 0.85rem;
+}
+
+.menu summary::-webkit-details-marker {
+  display: none;
+}
+
+.menu:not([open]) .close-label,
+.menu[open] .open-label {
+  display: none;
+}
+
+.nav-slot nav ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-slot nav a {
+  color: var(--navy);
+  text-decoration: none;
+  min-height: 48px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.nav-slot nav a[aria-current="page"] {
+  text-decoration: underline;
+  text-underline-offset: 0.3em;
+}
+
+@media (max-width: 720px) {
+  .home {
+    grid-template-columns: 1fr;
+  }
+
+  .spine {
+    writing-mode: horizontal-tb;
+    transform: none;
+    border: 0;
+    padding: 1rem 1.25rem 0;
+  }
+
+  .story {
+    width: min(40rem, calc(100% - 2.5rem));
+    padding-block-start: 1.5rem;
+  }
+
+  .nav-slot nav ul {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .nav-slot > nav {
+    display: none;
+  }
+
+  .menu[open] + nav {
+    display: block;
+    position: absolute;
+    z-index: 6;
+    inset-inline-end: 0;
+    top: 100%;
+    min-width: 13rem;
+    padding: 0.35rem 0.9rem 0.6rem;
+    background: #fff;
+    border-radius: 0.75rem;
+    box-shadow: 0 10px 30px rgba(28, 43, 69, 0.12);
+  }
+}
+
+@media (min-width: 721px) {
+  .menu {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

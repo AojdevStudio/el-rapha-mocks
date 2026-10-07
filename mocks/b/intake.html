@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client intake · The Ledger · El Rapha</title>
+    <meta name="description" content="Start an intake with El Rapha Bookkeeping & Consulting or ask about Rapha Home Care.">
+    <meta name="theme-color" content="#142033">
+    <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;600&family=Source+Serif+4:opsz,wght@8..60,560&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <p class="utility">
+      <span>Client intake · preview only</span>
+      <a href="tel:+19292722147">(929) 272-2147</a>
+    </p>
+    <header class="site-header">
+      <a class="brand" href="index.html">
+        <span class="mark" aria-hidden="true">ER</span>
+        <span>
+          <span class="brand-name">EL RAPHA</span>
+          <span class="brand-sub">Bookkeeping &amp; Consulting</span>
+        </span>
+      </a>
+      <div class="nav-slot">
+        <details class="menu">
+          <summary>
+            <span class="open-label">Menu</span>
+            <span class="close-label">Close</span>
+          </summary>
+        </details>
+        <nav aria-label="Primary">
+          <ul>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="intake.html" aria-current="page">Client intake</a></li>
+            <li><a href="index.html#home-care">Home care</a></li>
+            <li><a href="../../index.html">All concepts</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main id="main" class="wrap intake-layout">
+      <div>
+        <p class="kicker">Onboarding</p>
+        <h1>Send the packet once.</h1>
+        <p class="lede">In a live build, this form files the request, sends the confirmation, and opens the onboarding checklist. Here it only previews that path.</p>
+        <ol class="sequence">
+          <li>Request received</li>
+          <li>Morning email confirmation</li>
+          <li>Missing items requested once</li>
+          <li>Work starts on a rhythm</li>
+        </ol>
+      </div>
+      <form class="panel" data-mock-form action="intake.html" method="post">
+        <h2>Intake</h2>
+        <fieldset>
+          <legend>You</legend>
+          <div class="field">
+            <label for="name">Full name (required)</label>
+            <input id="name" name="name" type="text" autocomplete="name" required maxlength="100" enterkeyhint="next">
+          </div>
+          <div class="field">
+            <label for="email">Email (required)</label>
+            <input id="email" name="email" type="email" autocomplete="email" required enterkeyhint="next">
+          </div>
+          <div class="field">
+            <label for="phone">Phone (optional)</label>
+            <input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel">
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>The organization (bookkeeping clients)</legend>
+          <div class="field">
+            <label for="org">Organization name (optional)</label>
+            <input id="org" name="organization" type="text" autocomplete="organization" maxlength="120">
+          </div>
+          <div class="field">
+            <label for="kind">Organization type (optional)</label>
+            <select id="kind" name="organization_type">
+              <option value="">Choose if relevant</option>
+              <option>Small business</option>
+              <option>Nonprofit</option>
+              <option>Healthcare practice</option>
+              <option>Other</option>
+            </select>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>What you need (required)</legend>
+          <label class="choice" for="need-books">
+            <input id="need-books" type="radio" name="need" value="bookkeeping" required>
+            Bookkeeping
+          </label>
+          <label class="choice" for="need-form">
+            <input id="need-form" type="radio" name="need" value="formation">
+            Business formation
+          </label>
+          <label class="choice" for="need-comp">
+            <input id="need-comp" type="radio" name="need" value="compliance">
+            Compliance
+          </label>
+          <label class="choice" for="need-ops">
+            <input id="need-ops" type="radio" name="need" value="operations">
+            Operational consulting
+          </label>
+          <label class="choice" for="need-care">
+            <input id="need-care" type="radio" name="need" value="home-care">
+            Home care, the sister practice
+          </label>
+        </fieldset>
+        <div class="field">
+          <label for="note">Note (optional)</label>
+          <textarea id="note" name="note" maxlength="600" aria-describedby="note-hint"></textarea>
+          <span class="hint" id="note-hint">Do not include medical details, account numbers, or tax identifiers in this preview.</span>
+        </div>
+        <button type="submit">Submit intake</button>
+        <p class="form-status" data-mock-status tabindex="-1" role="status" hidden></p>
+        <noscript>
+          <p>To begin for real, email sundayosogbuyi@elraphagroups.com. This preview does not send the form.</p>
+        </noscript>
+      </form>
+    </main>
+    <footer class="site-footer wrap">
+      <p>Concept B · The Ledger · <a href="../../index.html">All concepts</a></p>
+    </footer>
+    <script src="../../assets/mock-form.js"></script>
+  </body>
+</html>
