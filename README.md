@@ -13,4 +13,12 @@ Open `index.html` for the review board.
 
 Forms are previews. They confirm on the page and do not send data. There is no login and no live portal.
 
-GitHub Pages should serve this folder from the `main` branch at the site root.
+The public URL, once Pages is on, is https://aojdevstudio.github.io/el-rapha-mocks/
+
+Publishing needs one setting this repository's admin can save. The files are already on `main`.
+
+1. Open the repository Settings, then Pages.
+2. Under Build and deployment, set Source to **Deploy from a branch**.
+3. Choose branch `main` and folder `/ (root)`, then Save.
+
+GitHub publishes the root `index.html` from that branch. No build step.
